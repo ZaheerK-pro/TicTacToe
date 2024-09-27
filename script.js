@@ -44,3 +44,13 @@ function fillField(field) {
         showCurrentPlayer();
     };
 };
+
+function showCurrentPlayer() {
+    if(currentShape == 'cross') {
+        document.getElementById('x-player-info').style.opacity = 0.5;
+        document.getElementById('o-player-info').style.opacity = 1;
+    } else {
+        document.getElementById('x-player-info').style.opacity = 1;
+        document.getElementById('o-player-info').style.opacity = 0.5;
+    };
+};
