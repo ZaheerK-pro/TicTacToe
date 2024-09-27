@@ -133,3 +133,35 @@ function updateWinnerContainerGraphics(winner) {
         document.getElementById('winning-container-img').src = 'res/' + winner + '.png';
     };
 };
+
+function addScore(to) {
+    document.getElementById(to + '-player-wins').innerHTML = Number(document.getElementById(to + '-player-wins').innerHTML) + 1;
+};
+
+
+function resetAll() {
+    document.getElementById('winning-container').classList.add('hide');
+
+    showCurrentPlayer();
+    resetAllFields();
+    resetAllValues();
+};
+
+function resetAllValues() { 
+    crossFields = [];
+    circleFields = [];
+    currentShape = winner;
+    winner = '';
+    winnersFields = [];
+}
+
+function resetAllFields() {
+    for(i = 0; i < 9; i++) {
+        if(i != 8){
+            document.getElementById('line-' + i).style.transitionDuration = '0ms';
+            document.getElementById('line-' + i).style.transform = document.getElementById('line-' + i).style.transform.replace('scaleX(1)', 'scaleX(0)');
+        };
+        document.getElementById('field-' + i).style.backgroundImage = '';
+        document.getElementById('field-' + i).classList.remove('disabled-td');
+    };
+};
