@@ -27,3 +27,20 @@ function setup() {
     document.getElementById('line-6').style.transform = 'rotate(45deg) scaleX(0)';
     document.getElementById('line-7').style.transform = 'rotate(135deg) scaleX(0)';
 };
+
+function fillField(field) {
+    if(!document.getElementById('field-' + field).classList.contains('disabled-td')) {
+        if(currentShape == 'cross') {
+            currentShape = 'circle';
+            circleFields.push(field);
+        } else {
+            currentShape = 'cross';
+            crossFields.push(field);
+        };
+        
+        disableField(field);
+        drawShapeAt(field);
+        checkWin();
+        showCurrentPlayer();
+    };
+};
