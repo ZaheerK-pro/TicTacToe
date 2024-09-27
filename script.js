@@ -66,3 +66,24 @@ function drawShapeAt(field){
 function disableField(field) {
     document.getElementById('field-' + field).classList.add('disabled-td');
 };
+
+function checkWin() {
+    /**check for winner */
+    for(i = 0; i < winningCombinations.length; i++) {
+        if(crossFields.includes(winningCombinations[i][0]) && crossFields.includes(winningCombinations[i][1]) && crossFields.includes(winningCombinations[i][2])){
+            winner = 'cross';
+            winnersFields = winningCombinations[i];
+        } else if(circleFields.includes(winningCombinations[i][0]) && circleFields.includes(winningCombinations[i][1]) && circleFields.includes(winningCombinations[i][2])) {
+            winner = 'circle';
+            winnersFields = winningCombinations[i];
+        };
+    };
+
+    if(winner){
+        drawLine(winningCombinations.indexOf(winnersFields));
+        addScore(winner);
+        showWinnerContainer(winner);
+    } else if(crossFields.length + circleFields.length == 9){
+        showWinnerContainer('draw');
+    };
+};
