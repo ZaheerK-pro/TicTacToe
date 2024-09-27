@@ -13,3 +13,17 @@ const winningCombinations = [
     [0, 4, 8],
     [6, 4, 2]
 ];
+
+function setup() {
+    showCurrentPlayer();
+
+    /**to replace transform value when drawing line */
+    document.getElementById('line-0').style.transform = 'scaleX(0)';
+    document.getElementById('line-1').style.transform = 'scaleX(0)';
+    document.getElementById('line-2').style.transform = 'scaleX(0)';
+    document.getElementById('line-3').style.transform = 'rotate(90deg) scaleX(0)';
+    document.getElementById('line-4').style.transform = 'rotate(90deg) scaleX(0)';
+    document.getElementById('line-5').style.transform = 'rotate(90deg) scaleX(0)';
+    document.getElementById('line-6').style.transform = 'rotate(45deg) scaleX(0)';
+    document.getElementById('line-7').style.transform = 'rotate(135deg) scaleX(0)';
+};
