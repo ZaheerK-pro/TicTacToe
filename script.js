@@ -87,3 +87,14 @@ function checkWin() {
         showWinnerContainer('draw');
     };
 };
+
+function drawLine(lineNo) {
+    const line = document.getElementById('line-' + lineNo);
+
+    line.style.transitionDuration = '225ms';
+    
+    setTimeout(() => {
+        line.style.transform = line.style.transform.replace('scaleX(0)', 'scaleX(1)');
+    },0);
+};
+
