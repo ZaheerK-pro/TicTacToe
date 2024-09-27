@@ -116,3 +116,20 @@ function showWinnerContainer(winner) {
 
     updateWinnerContainerGraphics(winner);
 };
+
+function updateWinnerContainerGraphics(winner) {
+    const winnerContainerImage = document.getElementById('winning-container-img');
+    const winnerTopLabel = document.getElementById('winning-container-top-label');
+    const winnerBottomLabel = document.getElementById('winning-container-bottom-label');
+    
+    if(winner == 'draw') {
+        winnerContainerImage.classList.add('hide');
+        winnerTopLabel.innerHTML = `It's a`;
+        winnerBottomLabel.innerHTML = 'Draw!';
+    } else {
+        winnerContainerImage.classList.remove('hide');
+        winnerTopLabel.innerHTML = 'Player';
+        winnerBottomLabel.innerHTML = 'won!';
+        document.getElementById('winning-container-img').src = 'res/' + winner + '.png';
+    };
+};
