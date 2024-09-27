@@ -98,3 +98,21 @@ function drawLine(lineNo) {
     },0);
 };
 
+
+function showWinnerContainer(winner) {
+    const winnerContainer = document.getElementById('winning-container');
+
+    /**animation */
+    setTimeout(() => {
+        document.getElementById('x-player-info').style.opacity = 1;
+        document.getElementById('o-player-info').style.opacity = 1;
+    }, 1);
+
+    winnerContainer.classList.remove('hide');
+    winnerContainer.style.opacity = 0;
+    setTimeout(() => {
+        winnerContainer.style.opacity = 1;
+    }, 750);
+
+    updateWinnerContainerGraphics(winner);
+};
