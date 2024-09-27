@@ -54,3 +54,15 @@ function showCurrentPlayer() {
         document.getElementById('o-player-info').style.opacity = 0.5;
     };
 };
+
+function drawShapeAt(field){
+    if(crossFields.includes(field)) {
+        document.getElementById('field-' + field).style.backgroundImage = 'url("res/cross.png")';
+    } else {
+        document.getElementById('field-' + field).style.backgroundImage = 'url("res/circle.png")';
+    };
+};
+
+function disableField(field) {
+    document.getElementById('field-' + field).classList.add('disabled-td');
+};
