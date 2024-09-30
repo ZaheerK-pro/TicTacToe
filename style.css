@@ -165,6 +165,10 @@ table tr td:last-child {
     animation: flash-bg 0.5s alternate;
 }
 
+@keyframes flash-bg {
+    0% { background-color: #FAF8EF; }
+    100% { background-color: #f50d0dc0; }
+}
 
 @media(max-width: 440px) {
     tr {
