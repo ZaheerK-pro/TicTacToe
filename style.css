@@ -147,6 +147,25 @@ table tr td:last-child {
     background: #A58C77;
 }
 
+/* Confetti effect */
+.confetti::before,
+.confetti::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('res/confetti.gif') center center no-repeat;
+    background-size: cover;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.draw-flash {
+    animation: flash-bg 0.5s alternate;
+}
+
+
 @media(max-width: 440px) {
     tr {
         width: 270px;
