@@ -161,6 +161,11 @@ table tr td:last-child {
     pointer-events: none;
 }
 
+.draw-flash {
+    animation: flash-bg 0.5s alternate;
+}
+
+
 @media(max-width: 440px) {
     tr {
         width: 270px;
