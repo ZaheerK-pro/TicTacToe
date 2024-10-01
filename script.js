@@ -117,7 +117,14 @@ function showWinnerContainer(winner) {
         winnerContainer.style.opacity = 1;
     }, 750);
 
-
+        // Play music based on winner or draw
+        if (winner === 'draw') {
+            drawSound.play();
+            triggerDrawEffect(); // Call function for draw effect
+        } else {
+            winSound.play();
+            triggerWinEffect(); // Call function for win effect
+        }
 
     updateWinnerContainerGraphics(winner);
 }
