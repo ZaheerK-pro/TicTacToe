@@ -15,8 +15,8 @@ const winningCombinations = [
 ];
 
 // Add audio elements to play winning and draw sounds
-const winSound = new Audio('res/win-sound.wav');
-const drawSound = new Audio('res/draw-sound.wav');
+const winSound = new Audio('assets/win-sound.wav');
+const drawSound = new Audio('assets/draw-sound.wav');
 
 function setup() {
     showCurrentPlayer();
@@ -61,9 +61,9 @@ function showCurrentPlayer() {
 
 function drawShapeAt(field) {
     if(crossFields.includes(field)) {
-        document.getElementById('field-' + field).style.backgroundImage = 'url("res/cross.png")';
+        document.getElementById('field-' + field).style.backgroundImage = 'url("assets/cross.png")';
     } else {
-        document.getElementById('field-' + field).style.backgroundImage = 'url("res/circle.png")';
+        document.getElementById('field-' + field).style.backgroundImage = 'url("assets/circle.png")';
     }
 }
 
@@ -156,7 +156,7 @@ function updateWinnerContainerGraphics(winner) {
         winnerContainerImage.classList.remove('hide');
         winnerTopLabel.innerHTML = 'Player';
         winnerBottomLabel.innerHTML = 'won!';
-        document.getElementById('winning-container-img').src = 'res/' + winner + '.png';
+        document.getElementById('winning-container-img').src = 'assets/' + winner + '.png';
     }
 }
 
