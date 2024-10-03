@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicTacToe</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="/js/script.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
     <script src="https://kit.fontawesome.com/291c2f4fc7.js" crossorigin="anonymous"></script>
 </head>
 <body onload="setup()">
@@ -15,11 +15,11 @@
     <!--Game Info-->
     <div class="row">
       <div id="o-player-info" class="player-info-container">
-        <img src="res/circle.png" class="player-info-image">
+        <img src="assets/circle.png" class="player-info-image">
         <span id="circle-player-wins">0</span>
       </div>
       <div id="x-player-info" class="player-info-container">
-        <img src="res/cross.png" class="player-info-image">
+        <img src="assets/cross.png" class="player-info-image">
         <span id="cross-player-wins">0</span>
       </div>
     </div>
@@ -57,7 +57,7 @@
       <!--Winning container-->
     <div id="winning-container" class="hide">
       <span id="winning-container-top-label">Player</span>
-      <img id="winning-container-img" src="res/circle.png">
+      <img id="winning-container-img" src="assets/circle.png">
       <span id="winning-container-bottom-label">won!</span>
       <div id="play-again-button" onclick="resetAll()">Play again</div>
     </div>
